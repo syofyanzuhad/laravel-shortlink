@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->text('profile_photo_path')->nullable();
+            $table->string('plan')->default('free'); // you might do user plan in better way but okay for this tutorial
             $table->timestamps();
         });
     }
